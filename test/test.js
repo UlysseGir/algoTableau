@@ -1,5 +1,5 @@
 import assert from "assert";
-import {min, moyenne, noString} from "../js/app.js";
+import {min, moyenne, noString, evenOdd} from "../js/app.js";
 
 describe('Array', function () {
   describe('#indexOf()', function () {
@@ -37,7 +37,7 @@ describe("noString", function(){
 })
 
 describe("evenOdd", function(){
-    it("should return", function() {
-        assert.deepEqual(evenOdd())
+    it("should return even and odd", function() {
+        assert.deepEqual(evenOdd([4,9,3,5,6,8,7,5,9,6,1,2,4]),[[4,6,8,6,2,4],[9,3,5,7,5,9,1]])
     })
 })
