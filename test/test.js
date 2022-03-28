@@ -1,5 +1,5 @@
 import assert from "assert";
-import {min, moyenne} from "../js/app.js";
+import {min, moyenne, noString} from "../js/app.js";
 
 describe('Array', function () {
   describe('#indexOf()', function () {
@@ -24,5 +24,20 @@ describe("min", function(){
 describe("moyenne", function(){
     it("should return 12", function() {
         assert.equal(moyenne([12,14,8,9,15,18,9]), 12)
+    })
+})
+
+describe("noString", function(){
+    it("should return [5,8,2]", function() {
+        assert.deepEqual(noString(["test",5,8,"test",2]), [5,8,2])
+    })
+    it("should return [3,9]", function() {
+        assert.deepEqual(noString([3,9]), [3,9])
+    })
+})
+
+describe("evenOdd", function(){
+    it("should return", function() {
+        assert.deepEqual(evenOdd())
     })
 })

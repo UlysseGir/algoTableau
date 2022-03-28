@@ -20,3 +20,32 @@ export const moyenne = (entry) => {
     tmp = Math.round(tmp / entry.length);
     return tmp
 }
+
+export const noString = (entry) => {
+
+    let tmp = [];
+
+    for(let i=0; i < entry.length; i++){
+        if(typeof entry[i] == "number"){
+            tmp.push(entry[i]);
+        }
+    }
+    return tmp;
+}
+
+export const evenOdd = (entry) => {
+
+    let even = [];
+    let odd = [];
+    let tmp = [even, odd];
+
+    for(let i=0; i <entry.length; i++){
+        if(entry[i] % 2 === 0){
+            even.push(entry[i]);
+        }
+        else {
+            odd.push(entry[i]);
+        }
+    }
+    return tmp;
+}
